@@ -56,7 +56,7 @@ public class Main {
     /**
      * Lambda
      */
-    List<LeadScoring> result = filter(newArrayList, (LeadScoring leadscoring) -> "dick".equals(leadscoring.get("email")));
+    List<LeadScoring> result = filter(newArrayList, (LeadScoring leadscoring) -> "dick".equals(leadscoring.getEmail()));
 
 
 
