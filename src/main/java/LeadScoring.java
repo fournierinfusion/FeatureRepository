@@ -1,4 +1,5 @@
-public class LeadScoring {
+
+public  class LeadScoring {
 
     private final String annualrevenue;
     private final String country;
@@ -10,135 +11,109 @@ public class LeadScoring {
     private final float qualificationscore;
     private final boolean isconverted;
 
-    private LeadScoring(
-        final annualrevenue newAnnualRevenue;
-        final country newCountry;
-        final email newEmail;
-        final industry newIndustry;
-        final leadsourcename newLeadSourceName;
-        final numberofemployees newNumberOfEmployees;
-        final yearsinbusiness newYearsInBusiness;
-        final qualificationscore newQualificationScore;
-        final isconverted newIsConverted){
+    public LeadScoring(
+            final String newAnnualRevenue,
+            final String newCountry,
+            final String newEmail,
+            final String newIndustry,
+            final String newLeadSourceName,
+            final String newNumberOfEmployees,
+            final String newYearsInBusiness,
+            final float newQualificationScore,
+            final boolean newIsConverted) {
 
-    this.annualrevenue = newAnnualRevenue;
-    this.country = newCountry;
-    this.email = newEmail;
-    this.industry = newIndustry;
-    this.leadsourcename = newLeadSourceName;
-    this.numberofemployees = newNumberOfEmployees;
-    this.yearsinbusiness = newYearsInBusiness;
-    this.qualificationscore = newQualificationScore;
-    this.isconverted = newIsConverted;
+        this.annualrevenue = newAnnualRevenue;
+        this.country = newCountry;
+        this.email = newEmail;
+        this.industry = newIndustry;
+        this.leadsourcename = newLeadSourceName;
+        this.numberofemployees = newNumberOfEmployees;
+        this.yearsinbusiness = newYearsInBusiness;
+        this.qualificationscore = newQualificationScore;
+        this.isconverted = newIsConverted;
     }
 
 
 
-        public annualrevenue getAnnualrevenue() {
-            return this.annualrevenue;
-        }
 
-        public country getCountry() {
-            return this.country;
-        }
 
-        public email getEmail() {
-            return this.email;
-        }
-
-        public industry getIndustry() {
-            return this.industry;
-        }
-
-        public leadscoringname getLeadSourceName() {
-            return this.leadsourcename;
-        }
-
-        public numbersofemployees getNumberofEmployees() {
-            return this.numberofemployees;
-        }
-
-        public yearsinbusiness getYearsinBusiness() {
-            return this.yearsinbusiness;
-        }
-
-        public qualificationscore getQualificationscore() {
-            return this.qualificationscore;
-        }
-
-        public I getIsconverted() {
-            return this.isconverted;
-    }
 
     public static class LeadScoringBuilder{
-        private annualrevenue nestedAnnualRevenue;
-        private country nestedCountry;
-        private email nestedEmail;
-        private industry nestedIndustry;
-        private leadsourcename nestedLeadSourceName;
-        private numberofemployees nestedNumberOfEmployees;
-        private yearsinbusiness nestedYearsInBusiness;
-        private qualificationscore nestedQualificationScore;
-        private isconverted nestedIsConverted;
+        private String nestedAnnualRevenue;
+        private String nestedCountry;
+        private String nestedEmail;
+        private String nestedIndustry;
+        private String nestedLeadSourceName;
+        private String nestedNumberOfEmployees;
+        private String nestedYearsInBusiness;
+        private float nestedQualificationScore;
+        private boolean nestedIsConverted;
 
         public LeadScoringBuilder (
-                final annualrevenue newAnnualRevenue;
-                final country newCountry;
-                final email newEmail;
-                final industry newIndustry;
-                final leadsourcename newLeadSourceName;
-                final numberofemployees newNumberOfEmployees;
-                final yearsinbusiness newYearsinBusiness;
-                final qualificationscore newQualificationScore
-                final isconverted newIsConverted;
 
-        ) {}
+                 String newEmail
 
-        public LeadScoringBuilder Annualrev(final annualrevenue newAnnualRevenue){
+        ){
+
+
+            this.nestedEmail = newEmail;
+
+        }
+
+
+
+
+
+
+
+
+
+
+        public LeadScoringBuilder annualrevenue(String newAnnualRevenue){
             this.nestedAnnualRevenue = newAnnualRevenue;
             return this;
         }
-        public LeadScoringBuilder Country(final country newCountry){
+        public LeadScoringBuilder country(String newCountry){
             this.nestedCountry = newCountry;
             return this;
         }
-        public LeadScoringBuilder Email(final email newEmail){
+        public LeadScoringBuilder email(String newEmail){
             this.nestedEmail = newEmail;
             return this;
         }
-        public LeadScoringBuilder Industry(final industry newIndustry){
-            this.industry = newIndustry;
+        public LeadScoringBuilder industry(String newIndustry){
+            this.nestedIndustry = newIndustry;
             return this;
         }
-        public LeadScoringBuilder Leadsourcename(final leadsourcename newLeadSourceName){
-            this.leadsourcename = newLeadSourceName;
+        public LeadScoringBuilder leadsourcename(String newLeadSourceName){
+            this.nestedLeadSourceName = newLeadSourceName;
             return this;
         }
-        public LeadScoringBuilder Numberofemployees(final numberofemployees newNumberOfEmployees){
-            this.numberofemployees = newNumberOfEmployees;
+        public LeadScoringBuilder numberofemployees(String newNumberOfEmployees){
+            this.nestedNumberOfEmployees = newNumberOfEmployees;
             return this;
         }
-        public LeadScoringBuilder Yearsinbusiness(final yearsinbusiness newYearsInBusiness){
-            this.yearsinbusiness = newYearsInBusiness;
+        public LeadScoringBuilder yearsinbusiness(String newYearsInBusiness){
+            this.nestedYearsInBusiness = newYearsInBusiness;
             return this;
         }
-        public LeadScoringBuilder Qualificationscore(final qualificationscore newQualificationScore){
-            this.qualificationscore = newQualificationScore;
-            return this;
-
-        }
-        public LeadScoringBuilder Isconverted(final isconverted newIsConverted){
-            this.isconverted = newIsConverted;
+        public LeadScoringBuilder qualificationscore(float newQualificationScore){
+            this.nestedQualificationScore = newQualificationScore;
             return this;
 
         }
+        public LeadScoringBuilder isconverted(boolean newIsConverted){
+            this.nestedIsConverted = newIsConverted;
+            return this;
 
-        Public LeadScoring createLeadScore(){
-            return new LeadScoring(nestedAnnualRevenue,nestedCountry,nestedEmail,nestedIndustry,nestedIsConverted,
-                    nestedLeadSourceName,nestedNumberOfEmployees,nestedQualificationScore,nestedYearsInBusiness);
         }
 
+        public LeadScoring createLeadScore() {
+            return new LeadScoring(nestedAnnualRevenue, nestedCountry, nestedEmail, nestedIndustry,
+                    nestedLeadSourceName, nestedNumberOfEmployees, nestedYearsInBusiness,nestedQualificationScore, nestedIsConverted);
 
+
+        }
 
     }
 
