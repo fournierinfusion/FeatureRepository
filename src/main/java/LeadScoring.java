@@ -11,6 +11,8 @@ public  class LeadScoring {
     private final float qualificationscore;
     private final boolean isconverted;
 
+
+
     public LeadScoring(
             final String newAnnualRevenue,
             final String newCountry,
@@ -34,6 +36,41 @@ public  class LeadScoring {
     }
 
 
+    public String getAnnualrevenue() {
+        return annualrevenue;
+    }
+
+    public String getCountry() {
+        return country;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public String getIndustry() {
+        return industry;
+    }
+
+    public String getLeadsourcename() {
+        return leadsourcename;
+    }
+
+    public String getNumberofemployees() {
+        return numberofemployees;
+    }
+
+    public String getYearsinbusiness() {
+        return yearsinbusiness;
+    }
+
+    public float getQualificationscore() {
+        return qualificationscore;
+    }
+
+    public boolean isIsconverted() {
+        return isconverted;
+    }
 
 
 

@@ -1,9 +1,12 @@
 import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
-    public static void Main(String[] args){
+    public static void Main(String[] args) {
 
-
+/**
+ * Instantiate LeadScoring Class --> This is used to stub in what would have been a dataset object
+ */
         LeadScoring ls1 = new LeadScoring.LeadScoringBuilder("test@gmail.com").annualrevenue("15645764000").country("USA").email("test@gmail.com")
                 .industry("Software").leadsourcename("John AppleSeed").numberofemployees("1030").yearsinbusiness("4").qualificationscore(1).isconverted(true).createLeadScore();
 
@@ -26,25 +29,52 @@ public class Main {
                 .industry("Software").leadsourcename("Shanna AppleSeed").numberofemployees("1003").yearsinbusiness("6").qualificationscore(1).isconverted(false).createLeadScore();
 
 
-        ArrayList<LeadScoring> newList = new ArrayList<LeadScoring>();
-
-        newList.add(ls1);
-        newList.add(ls2);
-        newList.add(ls3);
-        newList.add(ls4);
-        newList.add(ls5);
-        newList.add(ls6);
-        newList.add(ls7);
+        /**
+         *
+         *Create random array
+         */
+        List<LeadScoring> newArrayList = new ArrayList<LeadScoring>();
 
 
 
 
-
-
+        /**
+         *
+         * Add too array
+         */
+        newArrayList.add(ls1);
+        newArrayList.add(ls2);
+        newArrayList.add(ls3);
+        newArrayList.add(ls4);
+        newArrayList.add(ls5);
+        newArrayList.add(ls6);
+        newArrayList.add(ls7);
 
 
     }
 
+    /**
+     * Lambda
+     */
+    List<LeadScoring> result = filter(newArrayList, (LeadScoring leadscoring) -> "dick".equals(leadscoring.get("email")));
 
-    public static List
+
+
+
+
+    /**
+     * Abstracting list method
+     */
+
+    public static <T> List<T> filter(List<T> list, TypePredicate<T> p){
+        List<T> result = new ArrayList<>();
+            for(T e: list){
+                if(p.test(e)){
+                    result.add(e);
+                }
+            }
+            return result;
+
+
+    }
 }
